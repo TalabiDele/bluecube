@@ -1,10 +1,11 @@
 import Input from './Input'
 import { FaBell } from 'react-icons/fa'
 import img from '../assets/imgs/user.jpg'
+import { BiChevronDown } from 'react-icons/bi'
 
 const TopNav = () => {
 	return (
-		<div>
+		<div className='relative left-[20rem]'>
 			<div className=' mt-[1rem] ml-[3rem] flex items-center'>
 				<Input />
 				<div className=' relative'>
@@ -14,8 +15,18 @@ const TopNav = () => {
 					</p>
 				</div>
 
-				<div className=''>
-					<img src={img} alt='' className=' w-[4rem] h-[4rem] rounded-full' />
+				<div className=' flex items-center font-medium text-md text-gray-500'>
+					<div className=''>
+						<img
+							src={img}
+							alt=''
+							className=' w-[3rem] h-[3rem] rounded-full object-cover'
+						/>
+					</div>
+					<div className=' ml-[0.5rem] flex items-center'>
+						<p className=''>Abigail</p>
+						<BiChevronDown />
+					</div>
 				</div>
 			</div>
 		</div>
