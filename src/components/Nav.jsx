@@ -5,13 +5,14 @@ import { GiCornerFlag, GiPartyPopper, GiWalk } from 'react-icons/gi'
 import { BsLink45Deg } from 'react-icons/bs'
 import { HiUserGroup } from 'react-icons/hi'
 import { Link, useLocation } from 'react-router-dom'
+import TopNav from './TopNav'
 
 const Nav = () => {
 	const location = useLocation()
 
 	return (
-		<div className=' flex fixed'>
-			<div className=' pl-[5rem] border-r border-text_light w-[20rem] border-opacity-30 py-[2rem] h-[100vh]'>
+		<div className=' flex'>
+			<div className=' pl-[5rem] border-r border-text_light w-[20rem] border-opacity-30 py-[2rem] h-[100vh] fixed'>
 				<div className=''>
 					<img src={logo} alt='' className=' w-[10rem] mb-[3rem]' />
 				</div>
@@ -95,6 +96,8 @@ const Nav = () => {
 					</li>
 				</ul>
 			</div>
+
+			<TopNav />
 		</div>
 	)
 }
