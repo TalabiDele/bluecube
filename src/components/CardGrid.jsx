@@ -17,7 +17,7 @@ const CardGrid = () => {
 						key={e.id}
 					>
 						<Card
-							image={e.urls.full}
+							image={e.urls.regular}
 							// age={e.age}
 							location={e.user.location}
 							name={e.user.username}
