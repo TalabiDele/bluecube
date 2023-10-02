@@ -26,7 +26,7 @@ const Input = () => {
 				<input
 					type='text'
 					placeholder='Find Something...'
-					className=' shadow-lg px-[5rem] rounded-md w-[60vw] py-[1rem] placeholder:text-sm text-text_light outline-none'
+					className=' shadow-lg px-[5rem] rounded-md w-[60vw] py-[1rem] placeholder:text-sm text-text_light outline-none max-lg:w-[50vw] max-xl:w-[50vw] max-md:w-[80vw] max-md:mx-auto max-md:px-[3rem]'
 					value={searchValue}
 					onChange={(e) => setSearchValue(e.target.value)}
 				/>

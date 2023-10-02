@@ -6,6 +6,7 @@ const Context = createContext()
 export const Provider = ({ children }) => {
 	const [images, setImages] = useState()
 	const [loading, setLoading] = useState(false)
+	const [isSearch, setIsSearch] = useState(false)
 
 	useEffect(() => {
 		setLoading(true)
@@ -36,6 +37,8 @@ export const Provider = ({ children }) => {
 
 		setImages(data?.results)
 
+		setIsSearch(false)
+
 		setLoading(false)
 	}
 
@@ -47,6 +50,8 @@ export const Provider = ({ children }) => {
 				loading,
 				setLoading,
 				handleSearch,
+				isSearch,
+				setIsSearch,
 			}}
 		>
 			{children}

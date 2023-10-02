@@ -20,15 +20,15 @@ const Card = ({ image, name, location }) => {
 			) : (
 				<div>
 					<div
-						className=' rounded-lg w-[12rem] h-[20rem] shadow-md relative cursor-pointer mb-[2rem]'
+						className=' rounded-lg w-[11rem] h-[20rem] shadow-md relative cursor-pointer mb-[2rem] max-md:w-[12rem] max-sm:w-[12rem]'
 						onMouseEnter={() => setIsShow(true)}
 						onMouseLeave={() => setIsShow(false)}
 					>
 						<div className='flex justify-between w-[95%] absolute top-2 mx-auto'>
-							<div className=' h-[0.1rem] mx-auto w-[2.5rem] rounded-lg bg-white'></div>
-							<div className=' h-[0.1rem] mx-auto w-[2.5rem] rounded-lg bg-gray-500'></div>
-							<div className=' h-[0.1rem] mx-auto w-[2.5rem] rounded-lg bg-gray-500'></div>
-							<div className=' h-[0.1rem] mx-auto w-[2.5rem] rounded-lg bg-gray-500'></div>
+							<div className=' h-[0.1rem] mx-auto w-[2.5rem] max-lg:w-[2rem] rounded-lg bg-white'></div>
+							<div className=' h-[0.1rem] mx-auto w-[2.5rem] max-lg:w-[2rem] rounded-lg bg-gray-500'></div>
+							<div className=' h-[0.1rem] mx-auto w-[2.5rem] max-lg:w-[2rem] rounded-lg bg-gray-500'></div>
+							<div className=' h-[0.1rem] mx-auto w-[2.5rem] max-lg:w-[2rem] rounded-lg bg-gray-500'></div>
 						</div>
 						<img
 							src={image}
