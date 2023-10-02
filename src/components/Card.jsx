@@ -38,7 +38,7 @@ const Card = ({ image, name, location }) => {
 							loading='lazy'
 						/>
 						<div className='absolute text-white bottom-0 bg-gradient-to-t from-black to-transparent w-full rounded-lg px-[1rem] py-[3rem]'>
-							<p className=' text-lg font-medium'>{name}</p>
+							<p className=' text-lg font-medium w-[90%] break-all'>{name}</p>
 							{location && (
 								<div className=' flex items-center text-[0.7rem]'>
 									<FaMapMarkerAlt />
