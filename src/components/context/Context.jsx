@@ -17,8 +17,6 @@ export const Provider = ({ children }) => {
 
 			const data = await res.json()
 
-			console.log(data)
-
 			setImages(data)
 		}
 		setLoading(false)
