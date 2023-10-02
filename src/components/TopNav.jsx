@@ -13,9 +13,9 @@ const TopNav = () => {
 	const { isSearch, setIsSearch } = useContext(Context)
 
 	return (
-		<div className='relative left-[14rem] max-lg:left-[11rem] max-xl:left-[11rem] max-md:left-[2rem]'>
+		<div className='relative left-[14rem] max-lg:left-[11rem] max-xl:left-[11rem] max-md:left-[3rem] max-[360px]:left-[2rem]'>
 			{isNotify && <Notification />}
-			<div className=' mt-[1rem] ml-[3rem] flex items-center max-md:justify-between max-md:w-[70vw] max-sm:w-[60vw]'>
+			<div className=' mt-[1rem] ml-[3rem] flex items-center max-md:justify-between max-md:w-[80vw] max-[600px]:w-[70vw] max-[360px]:w-[60vw] '>
 				<FaSearch
 					className='  text-text_light text-2xl cursor-pointer hidden max-md:block'
 					onClick={() => setIsSearch(true)}
@@ -51,7 +51,7 @@ const TopNav = () => {
 						/>
 					</div>
 					<div className=' ml-[0.5rem] flex items-center'>
-						<p className=' max-md:hidden'>Abigail</p>
+						<p className=' max-sm:hidden'>Abigail</p>
 						<BiChevronDown />
 					</div>
 				</div>

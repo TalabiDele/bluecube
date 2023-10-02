@@ -8,7 +8,7 @@ const CardGrid = () => {
 
 	return (
 		<div className=' mt-[2rem]'>
-			<div className=' grid grid-cols-5 max-lg:grid-cols-3 max-xl:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 max-sm:justify-items-center'>
+			<div className=' grid grid-cols-5 max-lg:grid-cols-3 max-xl:grid-cols-4 max-md:grid-cols-2 max-[600px]:grid-cols-2 max-sm:justify-items-center max-[360px]:grid-cols-1'>
 				{images?.map((e) => (
 					<motion.div
 						initial={{ opacity: 0, scale: 0, x: 50 }}

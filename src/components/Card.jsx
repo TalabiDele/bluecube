@@ -21,7 +21,7 @@ const Card = ({ image, name, location }) => {
 			) : (
 				<div>
 					<div
-						className=' rounded-lg w-[12rem] h-[20rem] shadow-md relative cursor-pointer mb-[2rem] max-md:w-[12rem] max-sm:w-[12rem]'
+						className=' rounded-lg w-[12rem] h-[20rem] shadow-md relative cursor-pointer mb-[2rem] max-md:w-[12rem] max-[475px]:w-[10rem] max-[350px]:w-[12rem]'
 						onMouseEnter={() => setIsShow(true)}
 						onMouseLeave={() => setIsShow(false)}
 					>
