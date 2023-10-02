@@ -12,7 +12,7 @@ const Nav = () => {
 
 	return (
 		<div className=' flex'>
-			<div className=' pl-[5rem] border-r border-text_light w-[20rem] border-opacity-30 py-[2rem] h-[100vh] fixed'>
+			<div className=' pl-[3rem] border-r border-text_light w-[18vw] border-opacity-30 py-[2rem] h-[100vh] fixed'>
 				<div className=''>
 					<img src={logo} alt='' className=' w-[10rem] mb-[3rem]' />
 				</div>

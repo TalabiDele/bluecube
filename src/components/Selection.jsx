@@ -3,7 +3,7 @@ import { BiChevronDown } from 'react-icons/bi'
 const Selection = () => {
 	return (
 		<div className=' '>
-			<div className=' bg-white shadow-lg rounded-md text-gray-500 flex justify-center mt-[2rem]'>
+			<div className=' bg-white shadow-lg rounded-md text-gray-500 flex justify-center mt-[2rem] w-[80%]'>
 				<div className='  border-r border-gray-500 border-opacity-10 cursor-pointer'>
 					<div className=' flex items-center px-[1rem] py-[0.5rem]'>
 						<p className=' text-sm'>World</p>

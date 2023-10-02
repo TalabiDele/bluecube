@@ -9,7 +9,7 @@ const TopNav = () => {
 	const [isNotify, setIsNotify] = useState(false)
 
 	return (
-		<div className='relative left-[20rem]'>
+		<div className='relative left-[14rem]'>
 			{isNotify && <Notification />}
 			<div className=' mt-[1rem] ml-[3rem] flex items-center'>
 				<Input />
