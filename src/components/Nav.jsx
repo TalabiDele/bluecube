@@ -7,15 +7,27 @@ import { HiUserGroup } from 'react-icons/hi'
 import { Link, useLocation } from 'react-router-dom'
 import TopNav from './TopNav'
 import cube from '../assets/imgs/cube.png'
+import { useState } from 'react'
 
 const Nav = () => {
 	const location = useLocation()
+	const [isOpen, setIsOpen] = useState(false)
 
 	return (
 		<div className=' flex'>
-			<div className=' pl-[3rem] border-r border-text_light w-[18vw] border-opacity-30 py-[2rem] h-[100vh] fixed max-lg:pl-[1rem] max-lg:w-[20vw] max-md:w-[10vw] max-md:hidden'>
+			<div
+				className={` ${
+					isOpen && 'max-md:translate-x-0 max-md:bg-white max-md:z-[10]'
+				} pl-[3rem] border-r border-text_light w-[18vw] border-opacity-30 py-[2rem] h-[100vh] fixed max-lg:pl-[1rem] max-lg:w-[20vw] max-md:-translate-x-[20rem] max-md:bg-white max-md:z-[10] max-md:w-[15rem] transition-all ease-in-out duration-300`}
+				onMouseEnter={() => setIsOpen(true)}
+				onMouseLeave={() => setIsOpen(false)}
+			>
 				<div className=''>
-					<img src={logo} alt='' className=' w-[80%] mb-[3rem] max-md:hidden' />
+					<img
+						src={logo}
+						alt=''
+						className=' w-[80%] mb-[3rem] max-md:w-[7rem]'
+					/>
 				</div>
 
 				<ul className=' text-text_light font-medium text-md'>
@@ -98,7 +110,11 @@ const Nav = () => {
 				</ul>
 			</div>
 
-			<div className=' pl-[3rem] border-r border-text_light w-[18vw] border-opacity-30 py-[2rem] h-[100vh] fixed max-lg:pl-[1rem] max-lg:w-[20vw] max-md:w-[4rem] max-md:pl-[0.5rem] max-sm:w-[3rem] hidden max-md:block'>
+			<div
+				className=' pl-[3rem] border-r border-text_light w-[18vw] border-opacity-30 py-[2rem] h-[100vh] fixed max-lg:pl-[1rem] max-lg:w-[20vw] max-md:w-[4rem] max-md:pl-[0.5rem] max-sm:w-[3rem] hidden max-md:block'
+				onMouseEnter={() => setIsOpen(true)}
+				onMouseLeave={() => setIsOpen(false)}
+			>
 				<div className=''>
 					<img
 						src={cube}

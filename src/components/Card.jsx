@@ -3,6 +3,7 @@ import { FaMapMarkerAlt, FaRegThumbsDown } from 'react-icons/fa'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { useContext, useState } from 'react'
 import Context from './context/Context'
+import { motion } from 'framer-motion'
 
 const Card = ({ image, name, location }) => {
 	const [isShow, setIsShow] = useState(false)
@@ -20,7 +21,7 @@ const Card = ({ image, name, location }) => {
 			) : (
 				<div>
 					<div
-						className=' rounded-lg w-[11rem] h-[20rem] shadow-md relative cursor-pointer mb-[2rem] max-md:w-[12rem] max-sm:w-[12rem]'
+						className=' rounded-lg w-[12rem] h-[20rem] shadow-md relative cursor-pointer mb-[2rem] max-md:w-[12rem] max-sm:w-[12rem]'
 						onMouseEnter={() => setIsShow(true)}
 						onMouseLeave={() => setIsShow(false)}
 					>
@@ -48,7 +49,12 @@ const Card = ({ image, name, location }) => {
 						</div>
 
 						{isShow && (
-							<div className=' bg-white absolute bottom-0 w-full rounded-b-lg p-[1rem] shadow-lg'>
+							<motion.div
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								exit={{ opacity: 0 }}
+								className=' bg-white absolute bottom-0 w-full rounded-b-lg p-[1rem] shadow-lg'
+							>
 								<p className=' mb-[0.5rem]'>{name}</p>
 								{location && (
 									<div className=' flex items-center text-[0.7rem] mb-[1rem]'>
@@ -60,7 +66,7 @@ const Card = ({ image, name, location }) => {
 									<AiOutlineHeart className=' bg-secondary text-white rounded-sm w-[4.5rem] py-[0.3rem] text-3xl cursor-pointer' />
 									<FaRegThumbsDown className='bg-primary text-white rounded-sm w-[4.5rem] py-[0.3rem] text-3xl cursor-pointer' />
 								</div>
-							</div>
+							</motion.div>
 						)}
 					</div>
 				</div>

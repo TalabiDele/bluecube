@@ -1,6 +1,7 @@
 import jack from '../assets/imgs/user-2.jpg'
 import mike from '../assets/imgs/user-3.jpg'
 import { FaHeart, FaCommentAlt } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
 const Notification = () => {
 	const notify = [
@@ -29,9 +30,14 @@ const Notification = () => {
 
 	return (
 		<div>
-			<div className=' bg-white rounded-lg shadow-lg fixed z-[3] top-[5rem] right-[5rem]'>
+			<motion.div
+				initial={{ y: -20 }}
+				animate={{ y: 0 }}
+				exit={{ y: -20 }}
+				className=' bg-white rounded-lg shadow-lg fixed z-[3] top-[5rem] right-[5rem] max-md:right-[3rem] max-md:top-[4rem] max-md:w-[80vw] max-sm:w-[90vw] max-sm:right-[0]'
+			>
 				<div className=' relative'>
-					<div className='absolute left-1/2 -top-2 transform -translate-x-1/2 rotate-45 w-4 h-4 bg-white max-md:left-3/4 max-md:top-[6.8rem]'></div>
+					<div className='absolute left-52 -top-2 transform -translate-x-1/2 rotate-45 w-4 h-4 bg-white  max-xl:left-1/2 max-lg:left-60 max-md:left-1/2'></div>
 					<div className=''>
 						{notify.map((e) => (
 							<div
@@ -58,7 +64,7 @@ const Notification = () => {
 						))}
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</div>
 	)
 }
